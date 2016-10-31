@@ -2,8 +2,8 @@
 
 # WIMD.IO Data Repository & Services
 
-## What is WIMD
-This is WIMD.IO, an open, fully API driven, IoT data repository that enables low footprint connected devices to do two way data exchange with the cloud in order to store data and retrieve commands.
+## What is WIMD?
+This is WIMD.IO, an open, fully API driven, IoT data repository that enables low footprint connected devices to do two way data exchange with the cloud in order to store data and retrieve commands.<br>
 The platform provides several data services that can be used to do data cleansed, data validation, on the fly aggregation and much more.
 The data is stored in a database that can easily accessed by any external system, reporting tools, analytics systems that will focus on the data exploration, leaving all the data acquisition life cycle issues behind.
 
@@ -57,9 +57,9 @@ The data is stored in a database that can easily accessed by any external system
 
 ## The back end database
 The back end database for WIMD.IO is MariaDB server.
-The database schema consists of many tables, no triggers not storage procedures. The main tables in the system are:
-<b>Sensor</b>
-The <code>sensor</code> table holds the basic system element, a sensor.
+The database schema consists of many tables, no triggers not storage procedures. The main tables in the system are:<br>
+<b>Sensor</b><br>
+The <code>sensor</code> table holds the basic system element, a sensor.<br>
 A sensor is one numerical time series. Each sensor have an associate validation rule that tells to the system the way each sensor behaves, how it is validated and/or transformed.
 
 ### Sensor attributes
@@ -78,8 +78,8 @@ After the validation process is executed, a data point will have one of these st
 * minimum    - The data point is below the limit
 * estimated  - Tha data is valid but was estimated
 
-<b>Validation rule</b>
-The <code>validation_rule_v2</code> table holds the rules to import, validate and optionally transform a time series.
+<b>Validation rule</b><br>
+The <code>validation_rule_v2</code> table holds the rules to import, validate and optionally transform a time series.<br>
 Before use a time series the user must be sure that the data is correct, valid, clean. If we manipulate data without any sort of validation we may not be accurate or even lead to bad decisions.
 
 ## License
