@@ -7,7 +7,9 @@ This is WIMD.IO, an open, fully API driven, IoT data repository that enables low
 The platform provides several data services that can be used to do data cleansed, data validation, on the fly aggregation and much more.
 The data is stored in a database that can easily accessed by any external system, reporting tools, analytics systems that will focus on the data exploration, leaving all the data acquisition life cycle issues behind.
 
-## Global system architecture
+## System entities
+
+## Data ingestion diagram
 <pre>
 +-----------------+       +----------+          +--------------------+
 |                 |       |          |          |                    |
@@ -56,7 +58,7 @@ The data is stored in a database that can easily accessed by any external system
 </pre>
 
 ## The back end database
-The back end database for WIMD.IO is MariaDB server.
+The back end database for WIMD.IO is MariaDB server.<br>
 The database schema consists of many tables, no triggers not storage procedures. The main tables in the system are:<br>
 <b>Sensor</b><br>
 The <code>sensor</code> table holds the basic system element, a sensor.<br>
