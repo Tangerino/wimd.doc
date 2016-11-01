@@ -85,17 +85,22 @@ A data point consists of three attributes as in:
 
 ### Sensor status
 After the validation process is executed, a data point will have one of these status code
-* valid      - The data point is valid. I.e. did not break any rule
-* increment  - The data point is not incremental
-* decrement  - The data point is not decremental
-* gap        - There is a gap between samples
-* maximum    - The data point is above the limit
-* minimum    - The data point is below the limit
-* estimated  - Tha data is valid but was estimated
+<pre>
+| Status    | Value | Description                                          |
+|-----------|-------|------------------------------------------------------|
+| Valid     | 1     | The data point is valid. I.e. did not break any rule |
+| Increment | 2     | The data point is not incremental                    |
+| Decrement | 4     | The data point is not decremental                    |
+| gap       | 8     | There is a gap between samples                       |
+| Maximum   | 16    | The data point is above the limit                    |
+| Minimum   | 32    | The data point is below the limit                    |
+| Estimated | 64    | The data is valid but was estimated                  |
+| Null      | 128   | The data point was set to NULL                       |
+| Constant  | 256   | The data point is set to a constant                  |
+| Last      | 512   | The value was set as its previous value              |
+</pre>
 
-<b>Validation rule</b><br>
-The <code>validation_rule_v2</code> table holds the rules to import, validate and optionally transform a time series.<br>
-Before use a time series the user must be sure that the data is correct, valid, clean. If we manipulate data without any sort of validation we may not be accurate or even lead to bad decisions.
+
 
 ## License
 See license file please
