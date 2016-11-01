@@ -59,11 +59,20 @@ The data is stored in a database that can easily accessed by any external system
 
 ## The back end database
 The back end database for WIMD.IO is MariaDB server.<br>
-The database schema consists of many tables, no triggers not storage procedures. The main tables in the system are:<br>
-<b>Sensor</b><br>
-The <code>sensor</code> table holds the basic system element, a sensor.<br>
-A sensor is one numerical time series. Each sensor have an associate validation rule that tells to the system the way each sensor behaves, how it is validated and/or transformed.
-
+The database schema consists of many tables, no triggers nor stored procedures.<br>
+The main tables in the system are:<br><pre>
+| Name                | Description                                                                                                           |
+|---------------------|-----------------------------------------------------------------------------------------------------------------------|
+| sensor              | A variable in the system that represents a physical or logical quantity                                               |
+| sensor_rule         | A set of rules to validate and transform sensor values before they get into the system database                       |
+| sensor_json_data    | The 'raw' data sent by clients are stored here before being processed by the validation task                          |
+| sensor_history_data | The sensor database in form of time series. Once a sensor data is validated it is stored here                         |
+| job                 | A list of tasks to be performed by the system, like aggregation for example                                           |
+| sensor_alarm_data   | If a sensor is part of one or more alarm definition, the sensor data is copied here for later handling                |
+| sensor_virtual_data | If a sensor is part of a virtual sensor calculation, the sensor data if copied here                                   |
+| sensor_rollup_data  | Once the time series are aggregated, its content is stored here in form of hourly, daily, monthly and annually groups |
+| alarm_summary       | Active alarms (not finished or terminated) are kept here                                                              |
+| alarm_history       | Once a alarm is not active anymore it goes here                                                                       |</pre>
 ### Sensor attributes
 A data point consists of three attributes as in:
 * Time stamp
