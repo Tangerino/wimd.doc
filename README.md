@@ -100,6 +100,94 @@ After the validation process is executed, a data point will have one of these st
 | Last      | 512   | The value was set as its previous value              |
 </pre>
 
+## Validation rules
+The rules have the following atributes:
+
+### Global rule
+```sh
+enabled [true | false]
+```
+Indicates that the rule is active, otherwise no results are returned
+
+```sh
+expectedinterval [seconds]
+```
+The expected time span from one data point to another. This might be used as a reference by onter rules.
+
+### Pre validation
+```sh
+increment [true | false]
+```
+Time series must receive consecutive incremental data.
+
+```sh
+decrement [true | false]
+```
+Time series must receive consecutive decremental data.
+
+```sh
+checkgap [true | false]
+```
+The time series time stamp data points will be checked over its time span. If the time difference between two consecutive samples are bigger than ``` expectedinterval ``` parameter the sample will be flagged as invalid. If the value is zero no check is made.
+
+```sh
+fillgaps [true | false]
+```
+The gap(s) found between two data points will be filled by using the ```fillfunction ``` and will follow the ``` expectedinterval ``` parameter in order to create the data points.
+
+```sh
+fillfunction [null | last | linear | number]
+``` 
+Fill method.
+ 
+### Transformation
+```sh
+applydelta [true | false]
+```
+This is an index and the returning time series will be the delta  calculation from adjacent values.
+
+```sh
+scalefactor [number]
+```
+Will apply an multiplicator factor if different of zero.
+
+```sh
+addOffset [number]
+```
+Add and offset to the resulting value.
+
+```sh
+absolute [true | false]
+```
+Apply ABS function to the result.
+
+```sh
+downsampling [true | false]
+```
+Downsample data points to the ``` expectedinterval ```
+
+```sh
+downsamplingfunction [min | max | avg | sum | count]
+```
+Downsample statistical function
+
+
+### Post validation
+```sh
+maximum [number]
+```
+Check if the values is under of a maximum value.
+
+```sh
+minimum [number]
+```
+Check if the values is above of a maximum value.
+
+```sh
+tseoi [true | false]
+```
+For the resulting value, consider the time stamp for the end of interval for aggregations purposes.
+
 
 
 ## License
