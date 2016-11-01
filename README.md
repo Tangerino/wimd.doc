@@ -7,7 +7,11 @@ This is WIMD.IO, an open, fully API driven, IoT data repository that enables low
 The platform provides several data services that can be used to do data cleansed, data validation, on the fly aggregation and much more.
 The data is stored in a database that can easily accessed by any external system, reporting tools, analytics systems that will focus on the data exploration, leaving all the data acquisition life cycle issues behind.
 
+## System services
+![alt tag](https://wimd.io/images/services.jpg)
+
 ## System entities
+![alt tag](https://wimd.io/images/entities.jpg)
 
 ## Data ingestion diagram
 <pre>
