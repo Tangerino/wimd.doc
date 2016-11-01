@@ -75,9 +75,13 @@ The main tables in the system are:<br><pre>
 | alarm_history       | Once a alarm is not active anymore it goes here                                                                       |</pre>
 ### Sensor attributes
 A data point consists of three attributes as in:
-* Time stamp
-* Value and
-* Status
+<pre>
+| Attribute  | Description                                    |
+|------------|------------------------------------------------|
+| Time Stamp | A time stamp in in the form YYY-MM-DD HH:MM:SS |
+| Value      | A double precision numerical value             |
+| Status     | The data points status as listed below         |
+</pre>
 
 ### Sensor status
 After the validation process is executed, a data point will have one of these status code
