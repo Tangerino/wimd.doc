@@ -221,8 +221,7 @@ tseoi [true | false]
 For the resulting value, consider the time stamp for the end of interval for aggregations purposes.
 
 ## System APIs
-The whole system can be controlled by using the RESTful API described in [here][1]
-[1]:https://wimd.io/api/ "WIMD.IO API"
+The whole system can be controlled by using the RESTful API web service described in [here](https://wimd.io/api/ "WIMD.IO API").
 
 
 ## License
