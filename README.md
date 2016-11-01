@@ -171,6 +171,34 @@ downsamplingfunction [min | max | avg | sum | count]
 ```
 Downsample statistical function
 
+```sh
+hastimezone [true | false]
+```
+Indicated it the a time zone converstion must be applied to the time series before being used
+
+```sh
+tzname [text]
+```
+The time zone mane as defined. Example: Africa/Abidjan
+
+### Data transformation
+If the validation process transforms the original time series values, this time series is stored in the system as a second version, along with its original values. This is important mostly because with the original time series the system can always change the rules and rebuild the calculations. In order to store this derived time series the system needs  to know at least:
+```sh
+newsensorname [text]
+```
+The name of the new sensor
+
+```sh
+newsensorunit [text]
+```
+The new sensor unit
+
+```sh
+newsensorunitname [text]
+```
+The new sensor unit name
+
+Some sensor table fields are cloned automatically by the system like classification, zone, usage, time zone, etc.
 
 ### Post validation
 ```sh
