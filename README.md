@@ -24,7 +24,7 @@ The data is stored in a database that can easily accessed by any external system
                                                           |                                         |               |
                        +------------------+      +--------v---------+     +--------------+          |               |
                        |                  |      |                  |     |              |          |               |
-                       |  sensor_rule_v2  +------>  validationv2.c  <-----+    sensor    |          |               |
+                       |  sensor_rule_v2  +------>      vee.c       <-----+    sensor    |          |               |
                        |                  |      |                  |     |              |          |               |
                        +------------------+      +--+------------+--+     +--------------+          |               |
                                                     |            |                                  |               |
