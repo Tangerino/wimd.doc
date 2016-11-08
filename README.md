@@ -42,7 +42,7 @@ The data is stored in a database that can easily accessed by any external system
                                 |                         |      |                   |              |          |    |               |
 +-----------------+    +--------v----------+     +--------v------v---+   +-----------v-----------+  | +--------v----+---+    +------v-----+
 |                 |    |                   |     |                   |   |                       |  | |                 |    |            |
-|     alarm.c     <----+ sensor_alarm_data |     |      rollup.c     |   |  sensor_virtual_data  |  | |  calculation.c  |    |    etl.c   |
+|     alarm.c     <----+ sensor_alarm_data |     |      rollup.c     |   |  sensor_virtual_data  |  | |  calculation.c[_mod_calculation_](#calculation)  |    |    etl.c   |
 |                 |    |                   |     |                   |   |                       |  | |                 |    |            |
 +--------+--------+    +-------------------+     +--------+----------+   +-----------+-----------+  | +--^-------+------+    +------+-----+
          |                                                |                          |              |    |       |                  |
