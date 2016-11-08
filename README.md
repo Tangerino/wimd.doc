@@ -226,14 +226,15 @@ The whole system can be controlled by using the RESTful API web service describe
 
 ## Calculation module
 This module loads scripts from the database in form of libraries and programs and execute them based on the customer needs. 
-Every program must be lunched by an external entity like a cron job instance by running the 'wimd' program with --do-calculation [script name] option. In this case any other job will be ignored and only the script will be executed.
+Every program must be lunched by an external entity like a cron job instance by running the 'wimd' program with <code>--do-calculation [script name]</code> option. In this case any other job will be ignored and only the script will be executed.
 The calculation has access to all system entities and historical data via specific
 functions (Lua-C binding, not APIs). You can check the available functions here.
 Although the result might be sent back to a new time series, the module has access to the report table via an API.
 The report table consists basically in a JSON document that have all necessary information for a report generation toll.
 The report must be consumed or sent to an external application in order to be generated, as an example, we can send new charts to an Excel application or Tableau in a form of CSV content.
 The repost structure has the following format
-<pre>{
+<pre>
+{
     "name": "The report name here",
     "type": "The report type",
     "created": "ISO date creation time UTC",
@@ -243,7 +244,8 @@ The repost structure has the following format
     "body": {
         [your content here]
     }
-    }</pre>
+}
+</pre>
 The script can optionally choose to push the report result to an URL via a POST command. The report will be available via API anytime.
 
 
