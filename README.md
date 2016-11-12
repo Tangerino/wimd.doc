@@ -319,9 +319,3 @@ The repost structure has the following format
 }
 </pre>
 The script can optionally choose to push the report result to an URL via a POST command. The report will be available via API anytime.<br>
-
-
-
-
-## License
-See license file please
