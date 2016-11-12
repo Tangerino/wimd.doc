@@ -75,11 +75,8 @@ Alarm life cycle management such as terminating, acknowledge and user notificati
 User may be notified by different medias like SMS, e-mail or mobile apps<br>
 ![alt tag](https://wimd.io/images/alarms.jpg)
 
-
-
-
-
-
+### ETL
+![alt tag](https://wimd.io/images/etl.jpg)
 
 ## Data ingestion diagram
 <pre>
