@@ -61,7 +61,11 @@ Virtual metrics let you define a new higher-level metric by specifying an arbitr
 Some use cases:<br>
 Energy meters sends active and reactive energy every 15 minutes, with a virtual sensor we can calculate the power factor for every data sample.<br>
 Environmental measurements like Temperature, humidity and CO2 levels can be combined to generate a comfort index.<br>
-A water meter sends pulse count and this value must be multiplied by the pulse weight, like 5 liters per pulse. 
+A water meter sends pulse count and this value must be multiplied by the pulse weight, like 5 liters per pulse.<br>
+The formulas are indeed Lua scripts, here is some calculation examples.<br>
+![alt tag](https://wimd.io/images/formula1.jpg)
+Or one a bit more complex:
+![alt tag](https://wimd.io/images/formula2.jpg)
 
 ###
 
