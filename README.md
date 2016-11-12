@@ -36,7 +36,36 @@ If command is accepted, the device may persist the new settings on local storage
 The system can exchange arbitrary file content to the remote device (i.e. firmware upgrade or data in a form of text file as CSV or JSON)<br>
 ![alt tag](https://wimd.io/images/shadowdevices.jpg)
 
-### 
+### Places & Things
+Places usually represents a physical location but can be anything, a customer, a group, etc<br>
+Places have attributes that can be used to query and group information<br>
+Places have normalization factors that can be used to normalize data for a group of sensors over the time<br>
+Administrators may share places to one or more users<br>
+Things groups sensors. So in a place can have rooms, rooms may have things like energy consumption and air quality groups (the things)<br>
+
+### Sensors
+Sensor are individual points of measurement and lives under things.<br>
+A device may be a thermostat that may control the temperature and monitor humidity and CO2 levels<br>
+Temperature, humidity and CO2 are sensors, the temperature control is an actuator<br>
+Sensors have units and validation rules.<br>
+Sensor data is available in the system in forms of data series with milliseconds precision <br>
+Data may be validated, transformed or even have its time stamp recalculated in a different time zone<br>
+Data not validated stays in the ‘raw’ database. Validated data goes to ‘clean’ database and then are aggregated on the fly<br>
+Data has a retention policy. Old data may be discarded in order to save disk space<br>
+Support for virtual sensors that belongs to the same device. Add or subtract sensor to generate a new sensor data series<br>
+
+### Virtual sensors
+Virtual metrics let you define a new higher-level metric by specifying an arbitrary set of mathematical transformations to perform on a selection of native sensors you’re sending us. You “compose” a new higher-level metric using the native sensors available in the database.<br>
+![alt tag](https://wimd.io/images/virtualsensors.jpg)
+
+Some use cases:<br>
+Energy meters sends active and reactive energy every 15 minutes, with a virtual sensor we can calculate the power factor for every data sample.<br>
+Environmental measurements like Temperature, humidity and CO2 levels can be combined to generate a comfort index.<br>
+A water meter sends pulse count and this value must be multiplied by the pulse weight, like 5 liters per pulse. 
+
+###
+
+
 
 
 ## Data ingestion diagram
