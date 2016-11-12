@@ -21,12 +21,22 @@ Administrator creates devices and places<br>
 Administrators can share places to one or more users<br>
 
 ### Devices
-Devices are physical representation of an equipment; ETL or a system that is usually installed in remote premises.
-Devices have an special key (devkey) so it can authenticate into the system.
-Devices creates sensors and may send its settings to be stored in the system.
-Devices collects data from its sensors and push information to the platform in form of time series.
-Devices can request remote configuration from the system.
-Devices can request file download (i.e. firmware upgrade)
+Devices are physical representation of an equipment; ETL or a system that is usually installed in remote premises.<br>
+Devices have an special key (devkey) so it can authenticate into the system.<br>
+Devices creates sensors and may send its settings to be stored in the system.<br>
+Devices collects data from its sensors and push information to the platform in form of time series.<br>
+Devices can request remote configuration from the system.<br>
+Devices can request file download (i.e. firmware upgrade)<br>
+
+### Shadow devices
+Every real device have its image, or shadow, in the system database<br>
+Users can read the settings transform it and send it back to remote devices<br>
+Remote devices consumes the commands, acknowledge them (OK or error).<br>
+If command is accepted, the device may persist the new settings on local storage and send back the the settings again<br>
+The system can exchange arbitrary file content to the remote device (i.e. firmware upgrade or data in a form of text file as CSV or JSON)<br>
+![alt tag](https://wimd.io/images/shadowdevices.jpg)
+
+### 
 
 
 ## Data ingestion diagram
