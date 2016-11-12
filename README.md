@@ -76,6 +76,13 @@ User may be notified by different medias like SMS, e-mail or mobile apps<br>
 ![alt tag](https://wimd.io/images/alarms.jpg)
 
 ### ETL
+Data can be brought into the platform for convenience, for example today we support weather data coming from
+OpenWeatherMap (http://openweathermap.org)<br>
+It also provides, out of the box, the ability to export your data to your database. Places and all entities underneath are sent to the destination. The actual supported endpoints are:<br>
+MySql (https://www.mysql.com)<br>
+MariaDB (https://mariadb.com)<br>
+InfluxDB (https://influxdata.com)<br>
+Plain text (CSV, XML, JSON)<br>
 ![alt tag](https://wimd.io/images/etl.jpg)
 
 ## Data ingestion diagram
