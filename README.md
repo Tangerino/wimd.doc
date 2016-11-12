@@ -13,6 +13,22 @@ The data is stored in a database that can easily accessed by any external system
 ## System entities
 ![alt tag](https://wimd.io/images/entities.jpg)
 
+### Tenants and people
+A tenant is system infrastructure (hardware, software and cloud services) that holds everything. But it mainly holds devices and people.<br>
+People are administrators, those who requests to create an account, with full access to all resources.<br>
+Regular users, which have limited permissions, are created by administrators.<br>
+Administrator creates devices and places<br>
+Administrators can share places to one or more users<br>
+
+### Devices
+Devices are physical representation of an equipment; ETL or a system that is usually installed in remote premises.
+Devices have an special key (devkey) so it can authenticate into the system.
+Devices creates sensors and may send its settings to be stored in the system.
+Devices collects data from its sensors and push information to the platform in form of time series.
+Devices can request remote configuration from the system.
+Devices can request file download (i.e. firmware upgrade)
+
+
 ## Data ingestion diagram
 <pre>
 +-----------------+       +----------+          +--------------------+
