@@ -64,10 +64,19 @@ Environmental measurements like Temperature, humidity and CO2 levels can be comb
 A water meter sends pulse count and this value must be multiplied by the pulse weight, like 5 liters per pulse.<br>
 The formulas are indeed Lua scripts, here is some calculation examples.<br>
 ![alt tag](https://wimd.io/images/formula1.jpg)
-Or one a bit more complex:
+<br>Or one a bit more complex:
 ![alt tag](https://wimd.io/images/formula2.jpg)
 
-###
+### Alarms & Events
+There are two kinds of alarms & events sources<br>
+From the field device - Smart devices may have the ability to detect special conditions on the field and push such information in form of an alarm or event in the right moment it occurs<br>
+From the system - The system may have rules that detect special sensor values and generate alarms and/or events<br>
+Alarm life cycle management such as terminating, acknowledge and user notification<br>
+User may be notified by different medias like SMS, e-mail or mobile apps<br>
+![alt tag](https://wimd.io/images/alarms.jpg)
+
+
+
 
 
 
