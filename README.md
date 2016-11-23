@@ -1,4 +1,4 @@
-![alt tag](https://wimd.io/images/White_wimd.png)
+![alt tag](https://wimd.io/images/wimdlogo.jpg)
 
 # WIMD.IO Data Repository & Services
 
