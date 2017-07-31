@@ -133,6 +133,7 @@ Plain text (CSV, XML, JSON)<br>
 +-----------------+                             +--------------------+
 
 </pre>
+![alt tag](https://wimd.io/images/dataflow.jpg)
 
 ## The back end database
 The back end database for WIMD.IO is MariaDB server.<br>
